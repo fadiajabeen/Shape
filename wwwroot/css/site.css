@@ -1,0 +1,162 @@
+html {
+    font-size: 12px;
+    position: relative;
+    min-height: 100%;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+    background-image: linear-gradient(to right, #675970, #508E9B, #688360);
+}
+
+.layout-body {
+    background-image: none;
+    margin-bottom: 60px;
+}
+
+header {
+    background-color:white;
+}
+
+.footer[b-oxt1q2jhzb] {
+    line-height: 60px;
+    background-color: white;
+}
+
+.wrap-banner {
+    height: 75vh;
+}
+
+.banner {
+    width: 60%; 
+    margin: auto;
+    vertical-align: central;
+    align-items:center;
+}
+
+.navbar-brand {
+    background-image: url(../images/Logo.jpg);
+    background-position: left;
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    padding-left: 45px;
+}
+
+.wrapper {
+    min-height: 100vh;
+    width: 40%;
+    min-width: 30em;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    vertical-align: central;
+}
+
+.inner {
+    min-width: 30em;
+    margin: auto;
+    border: inset thin white;
+    border-radius: 1.8rem;
+    padding: 1.5rem 2rem;
+    background-color: white;
+}
+
+h3 {
+    color: #4E979F;
+    text-align: center;
+    margin-bottom: 32px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: Candara;
+}
+
+form {
+    width: 100%;
+}
+
+.form-group {
+    margin-top: .5rem;
+}
+
+.form-wrapper:first-child {
+    margin-right:1em;
+}
+
+.form-control {
+    color: #444d55;
+    padding: .25rem .75rem .375rem;
+    background-color: #f2f2f2;
+    border-radius: 1.2rem;
+}
+
+    .form-control:focus, .form-control:hover {
+        color: #2d4f52;
+        background-color: #fff;
+        border-color: #cce2e5;
+        box-shadow: 0 0 0 .25rem rgba(204, 226, 229,.45);
+    }
+
+.field-validation-error {
+    font-size: 11px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.control-label {
+    color: #737373;
+    margin-left: 3px;
+}
+
+#toggle-password, #toggle-confirm-password {
+    margin-left: -30px;
+    margin-top: 10px;
+    cursor: pointer;
+    color: #b3b3b3;
+    font-weight: 300;
+}
+
+    #toggle-password:hover, #toggle-confirm-password:hover {
+        color: #4E979F;
+    }
+
+#Password, #ConfirmPassword {
+    padding-right: 2.25rem;
+}
+
+    #Password:hover + #toggle-password, #ConfirmPassword:hover + #toggle-confirm-password {
+        color: #2d4f52;
+    }
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px #eef5f6 inset !important;
+}
+
+.submit {
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    border: none;
+    border-radius: 1.2rem;
+    background-color: #67ADB8;
+    color: whitesmoke;
+    padding: 5px 3rem 7px;
+    margin-top: 1.5rem;
+}
+
+.btn:hover {
+    background-color: #4E979F;
+    color: white;
+}
+    .btn:focus {
+        border-color: #cce2e5;
+        box-shadow: 0 0 0 .25rem rgba(204, 226, 229,.75);
+    }

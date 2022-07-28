@@ -1,0 +1,59 @@
+﻿@model Shape.Models.UserRegistration
+
+@{
+    ViewData["Title"] = "Shape Sign up";
+    Layout = "~/Views/Shared/_PreLoginLayout.cshtml";
+    var message = TempData["ErrorMessage"]?? string.Empty;
+}
+
+<div class="wrapper">
+    <div class="inner">
+        <form asp-action="Index" class="p-2">
+            <h3>CREATE SHAPE ACCOUNT</h3>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+             <div class="form-group">
+                <span class="text-danger">@message</span>
+            </div>
+            <div class="form-group d-flex">
+                <div class="form-wrapper">
+                    <label asp-for="Firstname" class="control-label"></label>
+                    <input asp-for="Firstname" class="form-control" />
+                    <span asp-validation-for="Firstname" class="text-danger"></span>
+                </div>
+                <div class="form-wrapper">
+                    <label asp-for="Lastname" class="control-label"></label>
+                    <input asp-for="Lastname" class="form-control" />
+                    <span asp-validation-for="Lastname" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <div class="d-flex">
+                    <input asp-for="Password" class="form-control" />
+                    <i class="far fa-eye" id="toggle-password"></i>
+                </div>
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword" class="control-label"></label>
+                <div class="d-flex">
+                    <input asp-for="ConfirmPassword" class="form-control" />
+                    <i class="far fa-eye" id="toggle-confirm-password"></i>
+                </div>
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="form-group submit">
+                <input type="submit" value="Sign up" class="btn" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
